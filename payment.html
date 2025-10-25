@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Laptop Webpage</title>
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="payment.css">
+</head>
+
+<body>
+
+    <div class="checkout-container">
+
+        <header class="checkout-header">
+            <nav class="progress-bar">
+                <span>Cart</span> &gt;
+                <span>Information</span> &gt;
+                <span>Shipping</span> &gt;
+                <span class="active">Payment</span>
+            </nav>
+        </header>
+
+        <main class="checkout-grid">
+            <section class="payment-details">
+
+                <div class="payment-method">
+                </div>
+
+                <form class="card-form" id="payment-form">
+
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-name">Name on Card</label>
+                        <input type="text" id="card-name" placeholder="John M. Doe">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half-width">
+                            <label for="expiry-date">Expiration Date (MM/YY)</label>
+                            <input type="text" id="expiry-date" placeholder="MM / YY">
+                        </div>
+                        <div class="form-group half-width">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" placeholder="123">
+                        </div>
+                    </div>
+
+                    <div class="billing-address">
+                        <h2>Billing Address</h2>
+                        <div class="method-option selected">
+                            <input type="checkbox" id="same-as-shipping" checked>
+                            <label for="same-as-shipping">Same as shipping address</label>
+                        </div>
+                    </div>
+
+                    <p id="payment-error" class="error"></p>
+
+                    <button type="submit" class="btn-complete-order" id="pay-completed">Complete Order</button>
+
+                </form>
+
+                <div class="trust-badges">
+                    <span>🔒 SSL Secure Payment</span>
+                </div>
+
+            </section>
+
+
+            <aside class="order-summary">
+                <h2>Order Summary</h2>
+
+                <ul class="item-list">
+                    <li class="item">
+                        <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba13-m3-starlight-gallery1-202402?wid=2000&hei=1536&fmt=jpeg&qlt=90&.v=1707253412999"
+                            alt="Laptop">
+                        <div class="item-details">
+                            <h4>UltimaBook Pro 15</h4>
+                            <span>Qty: 1</span>
+                        </div>
+                        <span class="item-price">$1,999.00</span>
+                    </li>
+                    <li class="item">
+                        <img src="https://imgs.search.brave.com/NSVUsxbxYHkipzM3dMLm8JYaxrx-eEwxHhI-I4KdYU8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9tb2Rlcm4tY29t/cHV0ZXItbW91c2Ut/d2lyZWxlc3MtaXNv/bGF0ZWQtd2hpdGUt/c3BhY2VfMTU4NTAy/LTEyOS5qcGc_c2Vt/dD1haXNfaW5jb21p/bmcmdz03NDAmcT04/MA"
+                            alt="Mouse">
+                        <div class="item-details">
+                            <h4>Pro Wireless Mouse</h4>
+                            <span>Qty: 1</span>
+                        </div>
+                        <span class="item-price">$89.99</span>
+                    </li>
+                </ul>
+
+                <div class="discount-form">
+                    <input type="text" placeholder="Discount code">
+                    <button>Apply</button>
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="price-line">
+                        <span>Subtotal</span>
+                        <span>$2,088.99</span>
+                    </div>
+                    <div class="price-line">
+                        <span>Shipping</span>
+                        <span>$15.00</span>
+                    </div>
+                    <div class="price-line">
+                        <span>Taxes</span>
+                        <span>$83.56</span>
+                    </div>
+                </div>
+
+                <div class="price-total">
+                    <span>Total</span>
+                    <span class="total-amount">$2,187.55</span>
+                </div>
+
+            </aside>
+        </main>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

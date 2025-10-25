@@ -1,0 +1,271 @@
+/* --- Global & Body --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* --- Main Container --- */
+.checkout-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* --- Header Progress Bar --- */
+.checkout-header {
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+    color: #777;
+}
+.progress-bar .active {
+    color: #000;
+    font-weight: 600;
+}
+
+/* --- 2-Column Grid Layout --- */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr; /* 60% / 40% split */
+    gap: 30px;
+}
+
+/* --- 1. Left Column: Payment Details --- */
+.payment-details {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.payment-details h2 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Payment Method Options */
+.method-option {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.method-option.selected {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+.method-option input[type="radio"],
+.method-option input[type="checkbox"] {
+    margin-right: 15px;
+    accent-color: #007bff; /* Colors the radio/checkbox */
+}
+.method-option label {
+    font-weight: 500;
+}
+
+/* Card Form */
+.card-form {
+    margin-top: 30px;
+}
+.billing-address {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+}
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-group input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,123,255,0.25);
+}
+
+/* Row for Expiry / CVV */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+.form-group.half-width {
+    flex: 1; /* Each takes 50% of the row */
+}
+
+/* Complete Order Button */
+.btn-complete-order {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-complete-order:hover {
+    background-color: #0056b3;
+}
+
+/* Trust Badges */
+.trust-badges {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* --- 2. Right Column: Order Summary --- */
+.order-summary {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    /* This makes it "sticky" if the left side is taller */
+    position: sticky; 
+    top: 30px; 
+}
+.order-summary h2 {
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+/* Item List */
+.item-list {
+    list-style: none;
+}
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+    border: 1px solid #eee;
+}
+.item-details {
+    flex: 1; /* Pushes price to the right */
+}
+.item-details h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+.item-details span {
+    font-size: 0.9rem;
+    color: #666;
+}
+.item-price {
+    font-weight: 600;
+}
+
+/* Discount Form */
+.discount-form {
+    display: flex;
+    margin-top: 20px;
+}
+.discount-form input {
+    flex: 1; /* Takes up available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    border-right: none;
+}
+.discount-form button {
+    padding: 10px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.discount-form button:hover {
+    background-color: #333;
+}
+
+/* Price Breakdown */
+.price-breakdown {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.price-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Total Price */
+.price-total {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.total-amount {
+    font-size: 1.4rem;
+    color: #000;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .checkout-grid {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+
+    /* Move summary to the top on mobile */
+    .order-summary {
+        grid-row: 1;
+        position: static; /* Remove sticky on mobile */
+    }
+
+    .payment-details {
+        padding: 20px;
+    }
+    .order-summary {
+        padding: 20px;
+    }
+    
+    .form-row {
+        flex-direction: column; /* Stack Expiry/CVV */
+        gap: 0;
+    }
+    .form-group.half-width {
+        margin-bottom: 20px;
+    }
+    .form-row .form-group:last-child {
+        margin-bottom: 0;
+    }
+}
