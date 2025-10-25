@@ -46,13 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // Check if ALL gallery elements exist
     if (main_img && image1 && image2 && image3) {
         image1.addEventListener("click", () => {
-            main_img.style.backgroundImage = "url('images/laptop-img-1.jpg')"; // Use local images!
+            main_img.style.backgroundImage = "url('https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba13-m3-starlight-gallery2-202402?wid=2000&hei=1536&fmt=jpeg&qlt=90&.v=1707253413143')"; 
         });
         image2.addEventListener("click", () => {
-            main_img.style.backgroundImage = "url('images/laptop-img-2.jpg')";
+            main_img.style.backgroundImage = "url('https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba13-m3-starlight-gallery3-202402?wid=2000&hei=1536&fmt=jpeg&qlt=90&.v=1707253413061')";
         });
         image3.addEventListener("click", () => {
-            main_img.style.backgroundImage = "url('images/laptop-img-3.jpg')";
+            main_img.style.backgroundImage = "url('https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mba13-m3-starlight-gallery4-202402?wid=2000&hei=1536&fmt=jpeg&qlt=90&.v=1707253413144')";
         });
         
         // Also add the 'active' border logic
